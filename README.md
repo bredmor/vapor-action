@@ -3,7 +3,7 @@
 [![GitHub Release][ico-release]][link-github-release]
 [![License][ico-license]](LICENSE)
 
-GitHub Actions for [Laravel Vapor](https://docs.vapor.build/1.0/introduction.html#requirements).
+GitHub Actions for [Laravel Vapor](https://docs.vapor.build/1.0/introduction.html#requirements). Uses [bredmor/laradocker](https://github.com/bredmor/laradocker) image for CI - Ubuntu@latest with PHP 7.3 and Node v12.
 
 ## Usage
 
