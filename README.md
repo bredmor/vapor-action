@@ -50,6 +50,6 @@ jobs:
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
-[ico-release]: https://img.shields.io/github/tag/teamnovu/vapor-action.svg
+[ico-release]: https://img.shields.io/github/tag/bredmor/vapor-action.svg
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
-[link-github-release]: https://github.com/teamnovu/vapor-action/releases
+[link-github-release]: https://github.com/bredmor/vapor-action/releases
