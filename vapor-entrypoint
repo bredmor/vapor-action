@@ -22,8 +22,9 @@ if [ -z ${VAPOR_API_TOKEN} ]; then
     echo "Generate one under https://vapor.laravel.com/app/account/api-tokens"
     exit 1
 fi
+echo $@
 
-VAPOR_CMD="$@"
+VAPOR_CMD=$@
 
 if [ ${GITHUB_SHA} ]; then
     VAPOR_CMD="${VAPOR_CMD/\$GITHUB_SHA/$GITHUB_SHA}"
@@ -35,4 +36,4 @@ fi
 
 echo $VAPOR_CMD
 
-vapor "$@"
+vapor "$VAPOR_CMD"
