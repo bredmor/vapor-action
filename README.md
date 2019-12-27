@@ -35,14 +35,12 @@ jobs:
       uses: bredmor/vapor-action@master
       env:
         VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
-        GIT_HASH: ${GITHUB_SHA::8}
-        GIT_REF: ${GITHUB_REF}
       with:
-        args: "deploy staging --commit=\"$GIT_HASH\" --message=\"Auto-deploy from $GIT_REF\""
+        args: "deploy staging --commit=\"$GITHUB_SHA\" --message=\"Auto-deploy from $GITHUB_REF\""
 ```
 
 ## Vapor CI Integration Helper
-Since github does not parse variables in args, this action will replace $GIT_HASH and $GIT_REF in args with the matching environment variables, if they exist. This allows you to use the vapor `--commit` and `--message` flags for CI logging (such as slack integration).
+Since github does not parse variables in args, this action will replace $GITHUB_SHA and $GITHUB_REF in args with the matching environment variables. This allows you to use the vapor `--commit` and `--message` flags for CI logging (such as slack integration).
 
 ## Credits
 
