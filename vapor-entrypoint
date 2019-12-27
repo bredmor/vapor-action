@@ -33,4 +33,6 @@ if [ ${GITHUB_REF} ]; then
     VAPOR_CMD="${VAPOR_CMD/\$GITHUB_REF/$GITHUB_REF}"
 fi
 
+echo $VAPOR_CMD
+
 vapor $VAPOR_CMD
