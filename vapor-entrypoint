@@ -35,4 +35,4 @@ fi
 
 echo $VAPOR_CMD
 
-vapor $VAPOR_CMD
+vapor "$@"
