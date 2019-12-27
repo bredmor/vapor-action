@@ -36,11 +36,11 @@ jobs:
       env:
         VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
       with:
-        args: "deploy staging --commit=\"$GITHUB_SHA\" --message=\"Auto-deploy from $GITHUB_REF\""
+        args: deploy staging
 ```
 
 ## Vapor CI Integration Helper
-Since github does not parse variables in args, this action will replace $GITHUB_SHA and $GITHUB_REF in args with the matching environment variables. This allows you to use the vapor `--commit` and `--message` flags for CI logging (such as slack integration).
+Auto-inserts commit hash and git ref for slack messages, emails, etc.
 
 ## Credits
 
