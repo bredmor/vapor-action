@@ -23,4 +23,14 @@ if [ -z ${VAPOR_API_TOKEN} ]; then
     exit 1
 fi
 
-vapor "$@"
+VAPOR_CMD="$@"
+
+if [ ${GIT_HASH} ]; then
+    VAPOR_CMD="${VAPOR_CMD/\$GIT_HASH/$GIT_HASH}"
+fi
+
+if [ ${GIT_REF} ]; then
+    VAPOR_CMD="${VAPOR_CMD/\$GIT_REF/$GIT_REF}"
+fi
+
+vapor "$VAPOR_CMD"
