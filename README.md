@@ -3,7 +3,7 @@
 [![GitHub Release][ico-release]][link-github-release]
 [![License][ico-license]](LICENSE)
 
-GitHub Actions for [Laravel Vapor](https://docs.vapor.build/1.0/introduction.html#requirements). Uses [bredmor/laradocker](https://github.com/bredmor/laradocker) image for CI - Ubuntu@latest with PHP 7.4 and Node v12.
+GitHub Actions for [Laravel Vapor](https://docs.vapor.build/1.0/introduction.html#requirements). Uses the latest [bredmor/laradocker](https://github.com/bredmor/laradocker) image for CI - Ubuntu@latest with PHP 8.0 and Node 14.
 
 ## Usage
 
