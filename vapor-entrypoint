@@ -23,4 +23,8 @@ if [ -z ${VAPOR_API_TOKEN} ]; then
     exit 1
 fi
 
+if [ ${NOVA_USERNAME} ]; then
+    composer config http-basic.nova.laravel.com ${NOVA_USERNAME} ${NOVA_PASSWORD}
+fi
+
 vapor "$@" --commit="${GITHUB_SHA}" --message="Auto-deploy from ${GITHUB_REF}"
